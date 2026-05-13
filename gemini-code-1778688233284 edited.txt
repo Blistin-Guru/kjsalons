@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KJ Salons Kenya | Luxury Beauty & Expert Care in Eldoret</title>
+    <meta name="description" content="Eldoret's trusted destination for premium salon, barbering, trichology, facials, sisterlocks, nails, and beauty transformations. Best beauty salon in Eldoret.">
+    <meta name="keywords" content="Best beauty salon in Eldoret, Sisterlocks Eldoret, Facial services Eldoret, Microshading Eldoret, Nail salon Eldoret, Barber shop Eldoret, Trichologist Eldoret, KJ Salons Kenya">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'matte-black': '#1c1c1c',
+                        'soft-ivory': '#FDFAF6',
+                        'gold-accent': '#D4AF37',
+                        'nude-beige': '#E3D3C4',
+                        'rose-gold': '#B76E79',
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #D4AF37, #B76E79);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .luxury-shadow {
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body class="font-sans bg-soft-ivory text-matte-black antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-matte-black/90 backdrop-blur-md border-b border-white/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-crown text-gold-accent text-2xl"></i>
+                    <a href="#" class="font-serif text-2xl font-bold tracking-wider text-soft-ivory uppercase">KJ<span class="text-gold-accent">Salons</span></a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-sm font-medium text-gray-300 hover:text-gold-accent transition">About</a>
+                    <a href="#services" class="text-sm font-medium text-gray-300 hover:text-gold-accent transition">Services</a>
+                    <a href="#gallery" class="text-sm font-medium text-gray-300 hover:text-gold-accent transition">Gallery</a>
+                    <a href="#reviews" class="text-sm font-medium text-gray-300 hover:text-gold-accent transition">Reviews</a>
+                    <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-gold-accent transition">Contact</a>
+                    <a href="#booking" class="bg-gold-accent hover:bg-yellow-600 text-matte-black px-6 py-2.5 rounded-sm font-semibold transition shadow-lg text-sm tracking-wide">Book Appointment</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-soft-ivory hover:text-gold-accent focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-matte-black border-t border-white/10">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-accent">About</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-accent">Services</a>
+                <a href="#gallery" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-accent">Gallery</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-gray-300 hover:text-gold-accent">Contact</a>
+                <a href="#booking" class="block px-3 py-2 text-base font-medium text-gold-accent">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center">
+        <!-- Background Video/Image Slider Fallback -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" alt="Luxury Salon Interior" class="w-full h-full object-cover" />
+            <div class="absolute inset-0 bg-matte-black/70"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-16" data-aos="fade-up" data-aos-duration="1000">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 mb-6">
+                <i class="fa-solid fa-shield-halved text-gold-accent"></i>
+                <span class="text-xs font-semibold uppercase tracking-widest text-soft-ivory">Women-Owned Business</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-soft-ivory leading-tight mb-6">
+                Luxury Beauty. <br/><span class="text-gradient italic">Expert Care.</span><br/> Timeless Confidence.
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-300 font-light mb-10 max-w-2xl mx-auto">
+                Eldoret’s trusted destination for premium salon, barbering, trichology, facials, sisterlocks, nails, and beauty transformations.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+                <a href="#booking" class="bg-gold-accent hover:bg-yellow-600 text-matte-black px-8 py-4 rounded-sm font-semibold transition shadow-lg tracking-wide uppercase text-sm flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-calendar-check"></i> Book Appointment
+                </a>
+                <a href="#services" class="bg-transparent border border-soft-ivory hover:bg-soft-ivory hover:text-matte-black text-soft-ivory px-8 py-4 rounded-sm font-semibold transition tracking-wide uppercase text-sm flex items-center justify-center gap-2">
+                    View Services
+                </a>
+                <a href="tel:0710472946" class="bg-transparent border border-rose-gold text-rose-gold hover:bg-rose-gold hover:text-white px-8 py-4 rounded-sm font-semibold transition tracking-wide uppercase text-sm flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-phone"></i> Call Now
+                </a>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 text-soft-ivory/80 text-sm">
+                <div class="flex items-center gap-2">
+                    <div class="flex text-gold-accent">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span>4.6 Rating | 350+ Reviews</span>
+                </div>
+                <span class="hidden md:block text-white/30">|</span>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot text-rose-gold"></i>
+                    <span>Zion Mall, Uganda Road, Ronald Ngala St, Eldoret</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-soft-ivory relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative">
+                        <img src="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" alt="Facial Treatment" class="rounded-t-full rounded-bl-full shadow-2xl object-cover h-[500px] w-full" />
+                        <div class="absolute -bottom-8 -right-8 bg-nude-beige p-6 rounded-full w-32 h-32 flex items-center justify-center border-4 border-soft-ivory">
+                            <span class="font-serif font-bold text-matte-black text-center leading-tight">Est.<br/>Eldoret</span>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <h4 class="text-rose-gold font-semibold tracking-widest uppercase text-sm mb-2">About KJ Salons Kenya</h4>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-matte-black mb-6">Elevating Beauty & Wellness in Eldoret.</h2>
+                    <div class="w-20 h-1 bg-gold-accent mb-6"></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        KJ Salons Kenya is a premium women-owned beauty salon in Eldoret dedicated to delivering luxury beauty and wellness experiences.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Located in Zion Mall, our salon combines advanced beauty techniques, expert trichology care, precision barbering, artistic nail design, and rejuvenating facial treatments to help every client look and feel their absolute best.
+                    </p>
+                    <p class="text-gray-600 font-medium border-l-4 border-rose-gold pl-4 italic">
+                        "Our commitment is rooted in excellence, hygiene, professionalism, and personalized care."
+                    </p>
+                    <div class="mt-8">
+                        <img src="https://ui-avatars.com/api/?name=Founder&background=E3D3C4&color=1c1c1c&rounded=true" alt="Owner" class="w-12 h-12 rounded-full inline-block mr-3" />
+                        <span class="font-serif font-bold text-matte-black">KJ Founder</span> <span class="text-sm text-gray-500">— Lead Trichologist & CEO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-matte-black relative overflow-hidden">
+        <!-- Abstract background blobs -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-rose-gold/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold-accent/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h4 class="text-gold-accent font-semibold tracking-widest uppercase text-sm mb-2">Our Expertise</h4>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-soft-ivory mb-6">Medical-Luxe Services</h2>
+                <p class="text-gray-400">Discover our comprehensive range of high-end beauty, haircare, and wellness treatments designed to empower and rejuvenate.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-leaf text-3xl text-rose-gold mb-6"></i>
+                    <h3 class="text-xl font-serif font-bold text-soft-ivory mb-4 border-b border-white/10 pb-4">Hair & Locks</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Sisterlocks installation & maintenance</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Microlinks</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Dreadlock styling</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Hair treatment & restoration</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Trichology consultation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-spa text-3xl text-rose-gold mb-6"></i>
+                    <h3 class="text-xl font-serif font-bold text-soft-ivory mb-4 border-b border-white/10 pb-4">Beauty & Skin</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Luxury facials</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Skin rejuvenation</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Acne treatment facials</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Deep cleansing facials</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-regular fa-eye text-3xl text-rose-gold mb-6"></i>
+                    <h3 class="text-xl font-serif font-bold text-soft-ivory mb-4 border-b border-white/10 pb-4">Brows & Lash Studio</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Microshading</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Eyebrow shaping</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Lash installation</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300 lg:col-span-1 md:col-span-2" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex justify-between items-start mb-6">
+                        <i class="fa-solid fa-hand-sparkles text-3xl text-rose-gold"></i>
+                        <span class="text-xs font-serif italic text-gold-accent bg-gold-accent/10 px-3 py-1 rounded-full">"Nails that speak louder than words."</span>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-soft-ivory mb-4 border-b border-white/10 pb-4">Nail Bar</h3>
+                    <ul class="space-y-3 text-gray-300 text-sm">
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Luxury manicure & Pedicure</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Gel polish & Nail art</li>
+                        <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Medical-luxe nail care</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="glass-card p-8 rounded-xl hover:-translate-y-2 transition duration-300 lg:col-span-2 md:col-span-2 relative overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative z-10">
+                        <i class="fa-solid fa-scissors text-3xl text-rose-gold mb-6"></i>
+                        <h3 class="text-xl font-serif font-bold text-soft-ivory mb-4 border-b border-white/10 pb-4">Premium Barbering</h3>
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <ul class="space-y-3 text-gray-300 text-sm">
+                                <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Precision cuts</li>
+                                <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Beard grooming</li>
+                                <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Fade styling</li>
+                                <li><i class="fa-solid fa-check text-gold-accent mr-2 text-xs"></i> Executive grooming</li>
+                            </ul>
+                            <div class="bg-matte-black/50 p-4 rounded border border-rose-gold/30">
+                                <p class="text-xs text-rose-gold mb-1"><i class="fa-solid fa-award"></i> Featured Expertise</p>
+                                <p class="text-sm text-soft-ivory italic">"Njuguna / Njugush — highly rated for exceptional attention to detail."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#booking" class="inline-block bg-soft-ivory text-matte-black px-8 py-4 rounded-sm font-semibold hover:bg-gold-accent hover:text-white transition shadow-[0_0_20px_rgba(212,175,55,0.3)] tracking-wide uppercase text-sm">
+                    Reserve Your Beauty Experience
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-nude-beige/20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-matte-black">The KJ Standard</h2>
+                <div class="w-16 h-1 bg-rose-gold mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg text-center luxury-shadow hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="50">
+                    <i class="fa-solid fa-star text-2xl text-gold-accent mb-3"></i>
+                    <p class="font-medium text-sm text-gray-800">350+ Verified Reviews</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center luxury-shadow hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fa-solid fa-venus text-2xl text-rose-gold mb-3"></i>
+                    <p class="font-medium text-sm text-gray-800">Women-Owned Excellence</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center luxury-shadow hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="150">
+                    <i class="fa-solid fa-certificate text-2xl text-gold-accent mb-3"></i>
+                    <p class="font-medium text-sm text-gray-800">Certified Specialists</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center luxury-shadow hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fa-solid fa-pump-medical text-2xl text-rose-gold mb-3"></i>
+                    <p class="font-medium text-sm text-gray-800">Premium Hygiene</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center luxury-shadow hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="250">
+                    <i class="fa-solid fa-heart text-2xl text-gold-accent mb-3"></i>
+                    <p class="font-medium text-sm text-gray-800">Personalized Care</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center luxury-shadow hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fa-solid fa-microscope text-2xl text-rose-gold mb-3"></i>
+                    <p class="font-medium text-sm text-gray-800">Modern Equipment</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center luxury-shadow hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="350">
+                    <i class="fa-solid fa-couch text-2xl text-gold-accent mb-3"></i>
+                    <p class="font-medium text-sm text-gray-800">Luxury Ambience</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg text-center luxury-shadow hover:-translate-y-1 transition" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fa-solid fa-user-tie text-2xl text-rose-gold mb-3"></i>
+                    <p class="font-medium text-sm text-gray-800">Trusted by Professionals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-24 bg-soft-ivory">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h4 class="text-rose-gold font-semibold tracking-widest uppercase text-sm mb-2">Client Testimonials</h4>
+                <h2 class="text-4xl font-serif font-bold text-matte-black mb-4">What Our Clients Say</h2>
+                <div class="inline-flex items-center gap-2 bg-white px-6 py-3 rounded-full luxury-shadow text-sm font-semibold">
+                    <div class="text-gold-accent text-lg">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <span>4.6/5 from 350+ happy clients</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-xl luxury-shadow relative" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-quote-left text-4xl text-nude-beige absolute top-6 right-6 opacity-50"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10">"The place to be. Refreshing service every time with exceptional attention to detail."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://ui-avatars.com/api/?name=Ignatius+Koech&background=1c1c1c&color=fff&rounded=true" alt="Ignatius Koech" class="w-12 h-12" />
+                        <div>
+                            <h5 class="font-bold text-matte-black text-sm">Ignatius Koech</h5>
+                            <div class="text-gold-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-xl luxury-shadow relative transform md:-translate-y-4" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-quote-left text-4xl text-nude-beige absolute top-6 right-6 opacity-50"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10">"Customer care is top notch. Truly an elite salon experience."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://ui-avatars.com/api/?name=Stephen+Kingori&background=D4AF37&color=fff&rounded=true" alt="Stephen Kingori" class="w-12 h-12" />
+                        <div>
+                            <h5 class="font-bold text-matte-black text-sm">Stephen Kingori</h5>
+                            <div class="text-gold-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-xl luxury-shadow relative" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-quote-left text-4xl text-nude-beige absolute top-6 right-6 opacity-50"></i>
+                    <p class="text-gray-600 italic mb-6 relative z-10">"A complete beauty experience from lashes to nails and hair. Highly recommend!"</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://ui-avatars.com/api/?name=Teresa+Ndonj&background=B76E79&color=fff&rounded=true" alt="Teresa Ndonj" class="w-12 h-12" />
+                        <div>
+                            <h5 class="font-bold text-matte-black text-sm">Teresa Ndonj</h5>
+                            <div class="text-gold-accent text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Social Section -->
+    <section id="gallery" class="py-24 bg-matte-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div data-aos="fade-right">
+                    <h4 class="text-gold-accent font-semibold tracking-widest uppercase text-sm mb-2">Portfolio</h4>
+                    <h2 class="text-4xl font-serif font-bold text-soft-ivory">Beauty Transformations Daily</h2>
+                </div>
+                <a href="#" class="text-rose-gold hover:text-white transition text-sm font-medium mt-4 md:mt-0 flex items-center gap-2" data-aos="fade-left">
+                    <i class="fa-brands fa-instagram text-xl"></i> Follow our Instagram
+                </a>
+            </div>
+
+            <!-- CSS Grid Gallery -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Replace src with actual Maps Photos -->
+                <div class="group relative overflow-hidden rounded-lg aspect-square" data-aos="zoom-in" data-aos-delay="50">
+                    <img src="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" alt="Sisterlocks" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-soft-ivory font-serif text-lg">Sisterlocks</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg aspect-square" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" alt="Nail Artistry" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-soft-ivory font-serif text-lg">Nail Art</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg aspect-[3/4] md:row-span-2 md:col-span-1" data-aos="zoom-in" data-aos-delay="150">
+                    <img src="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" alt="Client Transformation Before After" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                        <span class="text-soft-ivory font-serif text-lg">Transformations</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg aspect-square" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" alt="Facial" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-soft-ivory font-serif text-lg">Facials</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg aspect-square" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" alt="Barbering" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-soft-ivory font-serif text-lg">Precision Barbering</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-lg aspect-square" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" alt="Interior" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+                    <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <span class="text-soft-ivory font-serif text-lg">Luxury Ambience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Contact Section -->
+    <section id="booking" class="py-24 bg-nude-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Form Side -->
+                <div class="lg:w-1/2 p-10 md:p-16 bg-white">
+                    <h2 class="text-3xl font-serif font-bold text-matte-black mb-2">Book Appointment</h2>
+                    <p class="text-gray-500 mb-8 text-sm">Secure your spot for a premium self-care experience.</p>
+                    
+                    <form action="#" method="POST" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold-accent transition bg-transparent" placeholder="Jane Doe" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold-accent transition bg-transparent" placeholder="0710 472 946" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Service Selection</label>
+                            <select class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold-accent transition bg-transparent text-gray-600">
+                                <option>Sisterlocks / Hair</option>
+                                <option>Facial & Skincare</option>
+                                <option>Nail Bar (Mani/Pedi)</option>
+                                <option>Barbering</option>
+                                <option>Microshading / Lashes</option>
+                                <option>Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Date</label>
+                                <input type="date" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold-accent transition bg-transparent text-gray-600" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Time</label>
+                                <input type="time" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold-accent transition bg-transparent text-gray-600" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Preferred Stylist (Optional)</label>
+                            <input type="text" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold-accent transition bg-transparent" placeholder="e.g. Njuguna / Njugush">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Notes</label>
+                            <textarea rows="2" class="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-gold-accent transition bg-transparent" placeholder="Any special requests?"></textarea>
+                        </div>
+                        
+                        <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                            <button type="submit" class="flex-1 bg-matte-black text-white py-4 rounded-sm font-semibold hover:bg-gray-800 transition uppercase tracking-wide text-sm">
+                                Reserve Experience
+                            </button>
+                            <a href="https://wa.me/254710472946" target="_blank" class="flex-1 bg-[#25D366] text-white py-4 rounded-sm font-semibold hover:bg-[#1ebe5d] transition uppercase tracking-wide text-sm flex items-center justify-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Book via WhatsApp
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact & Map Side -->
+                <div id="contact" class="lg:w-1/2 bg-matte-black text-soft-ivory p-10 md:p-16 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-rose-gold/10 rounded-full filter blur-3xl"></div>
+                    
+                    <div class="relative z-10">
+                        <h3 class="text-2xl font-serif font-bold text-gold-accent mb-6">Visit Us</h3>
+                        
+                        <div class="space-y-6 mb-10">
+                            <div class="flex items-start gap-4">
+                                <i class="fa-solid fa-location-dot mt-1 text-rose-gold text-xl"></i>
+                                <div>
+                                    <p class="font-bold text-lg mb-1">Zion Mall</p>
+                                    <p class="text-gray-400 text-sm">1st Floor, Room 2<br/>Uganda Road, Ronald Ngala Street<br/>Eldoret, Kenya</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <i class="fa-regular fa-clock mt-1 text-rose-gold text-xl"></i>
+                                <div>
+                                    <p class="font-bold text-lg mb-1">Opening Hours</p>
+                                    <p class="text-gray-400 text-sm">Mon - Sat: 8:30 AM – 7:30 PM<br/>Sun: Closed</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <i class="fa-solid fa-phone mt-1 text-rose-gold text-xl"></i>
+                                <div>
+                                    <p class="font-bold text-lg mb-1">Contact</p>
+                                    <p class="text-gray-400 text-sm">0710 472946</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Map Embed -->
+                        <div class="w-full h-48 rounded-lg overflow-hidden border border-white/20 mb-6">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=Zion+Mall+Eldoret+Kenya&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+
+                        <a href="https://maps.app.goo.gl/MbC78rdNu8XGSiaU9" target="_blank" class="inline-block w-full text-center border border-gold-accent text-gold-accent hover:bg-gold-accent hover:text-matte-black py-3 rounded-sm font-semibold transition text-sm tracking-wide uppercase">
+                            Get Directions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#111] text-gray-400 pt-16 pb-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <i class="fa-solid fa-crown text-gold-accent text-2xl"></i>
+                        <span class="font-serif text-2xl font-bold tracking-wider text-soft-ivory uppercase">KJ<span class="text-gold-accent">Salons</span></span>
+                    </div>
+                    <p class="text-sm mb-6 max-w-md">Elevating Beauty in Eldoret. The premier destination for sophisticated haircare, medical-luxe aesthetics, and precision barbering.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold-accent hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold-accent hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-gold-accent hover:text-white transition"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-soft-ivory font-bold mb-4 font-serif">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-gold-accent transition">About Us</a></li>
+                        <li><a href="#services" class="hover:text-gold-accent transition">Our Services</a></li>
+                        <li><a href="#gallery" class="hover:text-gold-accent transition">Portfolio</a></li>
+                        <li><a href="#reviews" class="hover:text-gold-accent transition">Client Reviews</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal / SEO Links -->
+                <div>
+                    <h4 class="text-soft-ivory font-bold mb-4 font-serif">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#services" class="hover:text-gold-accent transition">Sisterlocks Eldoret</a></li>
+                        <li><a href="#services" class="hover:text-gold-accent transition">Facial Services</a></li>
+                        <li><a href="#services" class="hover:text-gold-accent transition">Nail Salon</a></li>
+                        <li><a href="#services" class="hover:text-gold-accent transition">Expert Barbering</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2026 KJ Salons Kenya. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Designed for Elegance. Secured with Modern Web Standards.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Actions: WhatsApp & AI Chatbot Mock -->
+    <div class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <!-- AI Beauty Assistant Button -->
+        <button class="w-14 h-14 bg-matte-black text-rose-gold border border-rose-gold rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 group relative">
+            <i class="fa-solid fa-sparkles text-xl group-hover:animate-pulse"></i>
+            <span class="absolute right-16 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">AI Beauty Assistant</span>
+        </button>
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/254710472946" target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition duration-300 relative group">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
+            <span class="absolute right-16 bg-black/80 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap">Chat on WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800,
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+                nav.classList.replace('bg-matte-black/90', 'bg-matte-black/95');
+            } else {
+                nav.classList.remove('shadow-lg');
+                nav.classList.replace('bg-matte-black/95', 'bg-matte-black/90');
+            }
+        });
+    </script>
+</body>
+</html>
